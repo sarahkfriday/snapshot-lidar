@@ -123,18 +123,18 @@
   </div>
 </section>
 
-<!-- Teaser video-->
+<!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <image src="static/images/teaser.png"></image>
       <h2 class="subtitle has-text-centered">
-        While conventional methods require multiple images, we propose a technique inspired by off-axis holography to capture depth in a single snapshot by embedding a time-of-flight (ToF) hologram in Fourier space. 
+        While conventional AMCW-ToF methods require multiple images, we propose a technique inspired by off-axis holography to capture depth in a single snapshot by embedding a time-of-flight (ToF) hologram in Fourier space. Our technique reduces bandwidth by 4x, and requires minimal changes to exisiting AMCW-ToF hardware.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -159,9 +159,9 @@
     <div class="container">
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/proposed_technique.png" alt="MY ALT TEXT" width="75%"/>
+        <img src="static/images/proposed_technique.png" alt="MY ALT TEXT" width="60%"/>
         <h2 class="subtitle has-text-centered">
-          Overview of the Fourier depth and amplitude reconstruction method.
+          Overview of our method. First, we capture an image with spatially varying phase across the rows or columns. Then, we take the 2D Fast Fourier Transform (FFT). In the Fourier domain, we filter out the complex conjugate twin because it is redundant and then center the hologram. From the inverse FFT of the centered hologram's FFT, we can reconstruct intensity and phase.
         </h2>
       </div>
 </div>
@@ -176,23 +176,23 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/changing_k.gif" alt="MY ALT TEXT"/>
+          <img src="static/images/changing_k.gif" alt="MY ALT TEXT" width="40%"/>
           <h2 class="subtitle has-text-centered">
-            First image description.
+            Changing the phase variation rate, k (rad/line), effects the separation between the ToF hologram and its twin in Fourier space, and thus the reconstruction.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/changing_sigma.gif" alt="MY ALT TEXT"/>
+          <img src="static/images/changing_sigma.gif" alt="MY ALT TEXT" width="65%"/>
           <h2 class="subtitle has-text-centered">
-            Second image description.
+            There exists an optimal amount of Gaussian blurring that improves the results of our method. Intuitively, 1D blurring perpendicular to the phase variation direction produces optimal results.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/rotation_angle.gif" alt="MY ALT TEXT"/>
+          <img src="static/images/rotation_angle.gif" alt="MY ALT TEXT" width="45%"/>
           <h2 class="subtitle has-text-centered">
-           Third image description.
+           By rotating the camera to disalign edges in the scene with the phase variation direction, we can further improve the results of our technique.
          </h2>
        </div>
   </div>
